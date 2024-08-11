@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "This is Next.js Home page for NextAdmin Dashboard Kit",
 };
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <>
       <DefaultLayout>
