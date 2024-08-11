@@ -6,6 +6,7 @@ import "@/css/style.css";
 import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
 import { SessionProvider } from "next-auth/react";
+import DefaultLayout from "@/components/Layouts/DefaultLaout";
 
 export default function RootLayout({
   children,
@@ -24,7 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <SessionProvider>{loading ? <Loader /> : children}</SessionProvider>
+        <SessionProvider>
+          {loading ? <Loader /> : <DefaultLayout>{children}</DefaultLayout>}
+        </SessionProvider>
       </body>
     </html>
   );
