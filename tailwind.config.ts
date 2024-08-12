@@ -317,6 +317,10 @@ const config: Config = {
         4: "0px 0px 2px rgba(0, 0, 0, 0.2)",
         5: "0px 1px 5px rgba(0, 0, 0, 0.2)",
       },
+      container: {
+        padding: "1rem",
+        center: true,
+      },
       keyframes: {
         linspin: {
           "100%": { transform: "rotate(360deg)" },
@@ -361,6 +365,15 @@ const config: Config = {
           "0%, 100%": { transform: "translateY(100%)" },
           "50%": { transform: "translateY(0)" },
         },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
       },
       animation: {
         linspin: "linspin 1568.2353ms linear infinite",
@@ -379,6 +392,8 @@ const config: Config = {
         line1: "line 10s infinite linear",
         line2: "line-revert 8s infinite linear",
         line3: "line 7s infinite linear",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
+        gradient: "gradient 8s linear infinite",
       },
     },
   },
