@@ -1,8 +1,13 @@
 "use client";
+import React from "react";
 import LogoImage from "@/assets/icons/logo.svg";
 import MenuIcon from "@/assets/icons/menu.svg";
+import { Session } from "next-auth";
 
-export const Navbar = () => {
+interface NavbarProps extends Partial<Session> {}
+export const Navbar: React.FC<NavbarProps> = React.memo((props) => {
+  const login = props?.user ? "Dashboard" : "Login";
+  const href = props?.user ? "/dashboard" : "/signin";
   return (
     <div className="bg-black">
       <div className="px-4">
@@ -47,13 +52,18 @@ export const Navbar = () => {
               >
                 Customers
               </a>
-              <button className="rounded-lg bg-white px-4 py-2 text-black">
-                Get for free
-              </button>
+              <a
+                href={href}
+                className="rounded-lg bg-white px-4 py-2 text-black"
+              >
+                {login}
+              </a>
             </nav>
           </div>
         </div>
       </div>
     </div>
   );
-};
+});
+
+Navbar.displayName = "Navbar";
