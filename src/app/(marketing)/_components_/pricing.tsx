@@ -21,7 +21,7 @@ export function PricingTab(props: PricingTabProps) {
         {props.popular && (
           <div className="absolute right-0 top-0 -mt-4 mr-6">
             <div className="inline-flex items-center rounded-full bg-emerald-500 px-3 py-1.5 text-xs font-semibold text-white shadow-sm shadow-slate-950/5">
-              Most Popular
+              পুপুলার প্ল্যান
             </div>
           </div>
         )}
@@ -43,7 +43,7 @@ export function PricingTab(props: PricingTabProps) {
             className="inline-flex w-full justify-center whitespace-nowrap rounded-lg bg-[#5D2CA8] px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 transition-colors duration-150 hover:bg-[#5D2CA2] focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-600"
             href="#0"
           >
-            Purchase Plan
+            পারচেজ প্ল্যান
           </a>
         </div>
         <div className="mb-3 font-medium text-slate-200">Includes:</div>
@@ -89,7 +89,7 @@ export default function PricingTable() {
             onClick={() => setIsAnnual(true)}
             aria-pressed={isAnnual}
           >
-            Yearly{" "}
+            বছর{" "}
             <span
               className={`${isAnnual ? "text-indigo-200" : "text-slate-400 dark:text-slate-500"}`}
             >
@@ -101,7 +101,7 @@ export default function PricingTable() {
             onClick={() => setIsAnnual(false)}
             aria-pressed={isAnnual}
           >
-            Monthly
+            মাস
           </button>
         </div>
       </div>
