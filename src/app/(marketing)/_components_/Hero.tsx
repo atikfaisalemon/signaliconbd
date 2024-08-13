@@ -16,7 +16,7 @@ export const Hero = () => {
         <div className="mt-8 flex justify-center ">
           <div className="relative inline-flex">
             <h1 className="tracking-tightner inline-flex text-center text-7xl font-bold sm:text-9xl">
-              Signal Icon <br /> is more
+              Signal Icon
             </h1>
             <motion.div
               className="absolute right-[478px] top-[108px] hidden sm:inline"
@@ -50,14 +50,12 @@ export const Hero = () => {
         </div>
         <div className="flex justify-center">
           <p className="mt-8 max-w-md text-center text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod
-            dicta, nisi autem dignissimos consequatur? Unde saepe eius nam.
-            Minima at quaerat non quae qui consequatur hic nam neque earum.
+            Experience Bufferless connectivity trusted by 500 families
           </p>
         </div>
         <div className="mt-8 flex justify-center">
           <button className="rounded-lg bg-white px-5 py-3 font-medium text-black">
-            Get for free
+            Self Care
           </button>
         </div>
       </div>
