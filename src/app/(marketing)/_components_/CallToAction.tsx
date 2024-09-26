@@ -33,12 +33,11 @@ export const CallToAction = () => {
           />
         </motion.div>
 
-        <h2 className="text-5xl font-bold tracking-tighter sm:text-6xl">
-          Get Instant Access
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-6xl">
+          গোপীনাথপুর ক্যাবল সিস্টেম
         </h2>
         <p className="mt-5 text-xl  text-white/70">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo,
-          veritatis? Omnis minima quisquam error accusamus?
+          ১৫০০ পরিবার আমাদের সাথে সংযুক্ত আছে তাই আজই আপনিও যুক্ত হউন ।
         </p>
         <form className="mx-auto mt-10 flex max-w-sm flex-col gap-2.5 sm:flex-row">
           <input
@@ -47,7 +46,7 @@ export const CallToAction = () => {
             className="h-12 rounded-lg bg-white/20 px-5 font-medium placeholder:text-[#9CA3AF] sm:flex-1"
           />
           <button className="h-12 rounded-lg bg-white px-5 text-black">
-            Get access
+            সাবমিট
           </button>
         </form>
       </div>
