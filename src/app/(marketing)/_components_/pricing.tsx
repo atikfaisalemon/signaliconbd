@@ -46,7 +46,7 @@ export function PricingTab(props: PricingTabProps) {
             পারচেজ প্ল্যান
           </a>
         </div>
-        <div className="mb-3 font-medium text-slate-200">Includes:</div>
+        <div className="mb-3 font-medium text-slate-200">সাথে থাকছে:</div>
         <ul className="grow space-y-3 text-sm text-slate-400">
           {props.features.map((feature, index) => {
             return (
@@ -108,7 +108,7 @@ export default function PricingTable() {
 
       <div className="mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3">
         {/* Pricing tab 1 */}
-        <PricingTab
+        {/* <PricingTab
           yearly={isAnnual}
           planName="Essential"
           price={{ yearly: 29, monthly: 35 }}
@@ -118,27 +118,27 @@ export default function PricingTable() {
             "Consectetur adipiscing elit",
             "Excepteur sint occaecat cupidatat",
             "Officia deserunt mollit anim",
-          ]}
+          ]} */}
         />
 
         {/* Pricing tab 2 */}
         <PricingTab
           yearly={isAnnual}
           popular={true}
-          planName="Perform"
-          price={{ yearly: 49, monthly: 55 }}
-          planDescription="There are many variations available, but the majority have suffered."
+          planName="রেগুলার প্ল্যান "
+          price={{ yearly: 1200, monthly: 100 }}
+          planDescription="অর্থপ্রদান নগদ, ব্যাঙ্ক ট্রান্সফার বা কোম্পানি দ্বারা সমর্থিত যেকোনো ডিজিটাল পেমেন্ট প্ল্যাটফর্মের মাধ্যমে করা যেতে পারে।"
           features={[
-            "Unlimited placeholder texts",
-            "Consectetur adipiscing elit",
-            "Excepteur sint occaecat cupidatat",
-            "Officia deserunt mollit anim",
-            "Predefined chunks as necessary",
+            "ফ্রি কানেকশন",
+            "২৪/৭ কাটমার সাপোর্ট ",
+            "৮৫ টিভি চ্যানেল ",
+            "নো অ্যাড ",
+            "সেটআপ বক্স অপসন",
           ]}
         />
 
         {/* Pricing tab 3 */}
-        <PricingTab
+        {/* <PricingTab
           yearly={isAnnual}
           planName="Enterprise"
           price={{ yearly: 79, monthly: 85 }}
@@ -151,7 +151,7 @@ export default function PricingTable() {
             "Predefined chunks as necessary",
             "Free from repetition",
           ]}
-        />
+        /> */}
       </div>
     </div>
   );

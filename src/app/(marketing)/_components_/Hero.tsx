@@ -16,7 +16,7 @@ export const Hero = () => {
         <div className="mt-8 flex justify-center ">
           <div className="relative inline-flex">
             <h1 className="tracking-tightner inline-flex text-center text-7xl font-bold sm:text-9xl">
-              Signal Icon
+              GCS
             </h1>
             <motion.div
               className="absolute right-[478px] top-[108px] hidden sm:inline"
@@ -50,12 +50,13 @@ export const Hero = () => {
         </div>
         <div className="flex justify-center">
           <p className="mt-8 max-w-md text-center text-xl">
-            Experience Bufferless connectivity trusted by 500 families
+            Experience Bufferless connectivity trusted by 1500 families -
+            গোপীনাথপুর ক্যাবল সিস্টেম
           </p>
         </div>
         <div className="mt-8 flex justify-center">
-          <button className="rounded-lg bg-white px-5 py-3 font-medium text-black">
-            Self Care
+          <button className="rounded-lg bg-green-400 px-5 py-3 font-bold text-white">
+            বিকাশ ও নগদ এর মাধ্যমে পেমেন্ট করুন
           </button>
         </div>
       </div>

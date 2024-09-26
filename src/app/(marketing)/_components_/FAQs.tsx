@@ -5,24 +5,39 @@ import MinusIcon from "@/assets/icons/minus.svg";
 import { motion, AnimatePresence } from "framer-motion";
 const items = [
   {
-    question: "What payment methods do you accept?",
+    question: "অর্থপ্রদানের পদ্ধতি:",
     answer:
-      "We accept all major credit cards, PayPal, and various other payment methods depending on your location. Please contact our support team for more information on accepted payment methods in your region.",
+      " অর্থপ্রদান বিকাশ,নগদ, ব্যাঙ্ক ট্রান্সফার বা কোম্পানি দ্বারা সমর্থিত যেকোনো ডিজিটাল পেমেন্ট প্ল্যাটফর্মের মাধ্যমে করা যেতে পারে।",
   },
   {
-    question: "How does the pricing work for teams?",
+    question: "মাসিক সাবস্ক্রিপশন ফি:",
     answer:
-      "Our pricing is per user, per month. This means you only pay for the number of team members you have on your account. Discounts are available for larger teams and annual subscriptions.",
+      " আদর্শ মাসিক সাবস্ক্রিপশন ফি হল ডিশ এর জন্য 100 টাকা প্রতি গ্রাহক, অগ্রিম প্রদেয়।",
   },
   {
-    question: "Can I change my plan later?",
+    question: "বিলিং চক্র:",
     answer:
-      "Yes, you can upgrade or downgrade your plan at any time. Changes to your plan will be prorated and reflected in your next billing cycle.",
+      " এটি মাসিক ভিত্তিতে গণনা করা হয়, পরিষেবা সক্রিয়করণের তারিখ থেকে শুরু করে। বিলিং চক্র শুরু হওয়ার 7 দিনের মধ্যে অর্থপ্রদান করতে হবে।",
   },
   {
-    question: "Is my data secure?",
+    question: "রিষেবা সাসপেনশন: ",
     answer:
-      "Security is our top priority. We use state-of-the-art encryption and comply with the best industry practices to ensure that your data is stored securely and accessed only by authorized users.",
+      "পনির্ধারিত তারিখের 15 দিনের মধ্যে অর্থ প্রদান না হলে পরিষেবাগুলি স্থগিত করা হতে পারে৷ ",
+  },
+  {
+    question: "ফেরত নীতি: ",
+    answer:
+      "অর্থপ্রদানের পরে আংশিক মাস বা অব্যবহৃত পরিষেবাগুলির জন্য কোনও ফেরত দেওয়া হবে না।",
+  },
+  {
+    question: "অ্যাকাউন্টের বন্ধ :",
+    answer:
+      " যে কোনও পক্ষ এক মাসের লিখিত বিজ্ঞপ্তি দিয়ে পরিষেবাটি বন্ধ করতে পারে। মাস শেষ হওয়ার আগে গ্রাহকের দ্বারা বন্ধের  অনুরোধ করা হলে অবশিষ্ট দিনগুলির জন্য কোন ফেরত প্রদান করা হবে না।",
+  },
+  {
+    question: "রক্ষণাবেক্ষণের বাধা:",
+    answer:
+      "  রক্ষণাবেক্ষণ বা অপ্রত্যাশিত প্রযুক্তিগত সমস্যার কারণে পরিষেবা বাধার জন্য কোম্পানি দায়বদ্ধ নয়, তবে বাধাগুলি কমানোর জন্য প্রচেষ্টা করা হবে।",
   },
 ];
 
@@ -63,7 +78,7 @@ export const FAQs = () => {
     <div className="bg-black bg-gradient-to-b from-[#5D2CA8] to-black py-[72px] text-white sm:py-24 ">
       <div className="container">
         <h2 className="mx-auto text-center text-5xl tracking-tighter text-white sm:w-[648px] sm:text-6xl">
-          Frequently Asked Questions
+          ট্রামস এন্ড কন্ডিশন
         </h2>
         <div className="mx-auto mt-12 max-w-[648px]">
           {items.map(({ question, answer }) => (
