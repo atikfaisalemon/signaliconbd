@@ -4,8 +4,9 @@
   "private": true,
   "author": "Mahamud Hasan <rockreyad@gmail.com>",
   "scripts": {
+    "generate": "prisma generate --schema=src/prisma/schema.prisma",
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm run generate && next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
