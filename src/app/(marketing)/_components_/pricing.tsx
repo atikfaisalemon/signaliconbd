@@ -119,7 +119,7 @@ export default function PricingTable() {
             "Excepteur sint occaecat cupidatat",
             "Officia deserunt mollit anim",
           ]} */}
-        />
+        {/* /> */}
 
         {/* Pricing tab 2 */}
         <PricingTab
