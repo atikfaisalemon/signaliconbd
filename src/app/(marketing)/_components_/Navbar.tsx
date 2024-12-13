@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import LogoImage from "@/assets/icons/logo.svg";
 import MenuIcon from "@/assets/icons/menu.svg";
@@ -6,7 +5,7 @@ import { Session } from "next-auth";
 
 interface NavbarProps extends Partial<Session> {}
 export const Navbar: React.FC<NavbarProps> = React.memo((props) => {
-  const login = props?.user ? "Dashboard" : "Login";
+  const login = props?.user ? "ড্যাশবোর্ড" : "লগইন";
   const href = props?.user ? "/dashboard" : "/signin";
   return (
     <div className="bg-black">
@@ -22,36 +21,12 @@ export const Navbar: React.FC<NavbarProps> = React.memo((props) => {
               <MenuIcon className="text-white" />
             </div>
             <nav className="hidden items-center gap-6 text-white sm:flex">
-              <a
+              {/* <a
                 href="#"
                 className="text-white text-opacity-60 transition hover:text-opacity-100"
               >
                 About
-              </a>
-              <a
-                href="#"
-                className="text-white text-opacity-60 transition hover:text-opacity-100"
-              >
-                Features
-              </a>
-              <a
-                href="#"
-                className="text-white text-opacity-60 transition hover:text-opacity-100"
-              >
-                Updates
-              </a>
-              <a
-                href="#"
-                className="text-white text-opacity-60 transition hover:text-opacity-100"
-              >
-                Help
-              </a>
-              <a
-                href="#"
-                className="text-white text-opacity-60 transition hover:text-opacity-100"
-              >
-                Customers
-              </a>
+              </a> */}
               <a
                 href={href}
                 className="rounded-lg bg-white px-4 py-2 text-black"

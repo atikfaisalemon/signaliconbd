@@ -9,8 +9,7 @@ export const Pricing = () => {
         </h2>
         <div className="mx-auto max-w-xl">
           <p className="mt-5 text-center text-xl text-white/70">
-            বিকাশ ও নগদ এর মাধ্যমে খুব সহজেই রিচার্জ করুন। কোন সমস্যা ফেইচ করলে
-            ০১৭১২৯৬৫০০৭ এই নম্বর এ যোগাযোগ করুন।
+            সমস্যা হলে হেল্প লাইনে যোগাযোগ করুন এই ০১৭১২৯৬৫০০৭ নাম্বারে
           </p>
         </div>
         <div className="flex flex-col items-center justify-center gap-4 px-24 py-[72px] sm:flex-row sm:py-24  ">
