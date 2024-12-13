@@ -27,7 +27,9 @@ export async function signin(
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
-        case "CallbackRouteError" || "CredentialsSignin":
+        case "CallbackRouteError":
+          return errorMessage;
+        case "CredentialsSignin":
           return errorMessage;
         default:
           return { message: "Something went wrong!" };

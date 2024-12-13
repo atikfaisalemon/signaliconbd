@@ -7,8 +7,8 @@ interface PricingTabProps {
   popular?: boolean;
   planName: string;
   price: {
-    monthly: number;
-    yearly: number;
+    monthly: string;
+    yearly: string;
   };
   planDescription: string;
   features: string[];
@@ -21,7 +21,7 @@ export function PricingTab(props: PricingTabProps) {
         {props.popular && (
           <div className="absolute right-0 top-0 -mt-4 mr-6">
             <div className="inline-flex items-center rounded-full bg-emerald-500 px-3 py-1.5 text-xs font-semibold text-white shadow-sm shadow-slate-950/5">
-              Most Popular
+              পুপুলার প্ল্যান
             </div>
           </div>
         )}
@@ -29,12 +29,14 @@ export function PricingTab(props: PricingTabProps) {
           <div className="mb-1 font-semibold text-white/70">
             {props.planName}
           </div>
-          <div className="mb-2 inline-flex items-baseline">
-            <span className="text-3xl font-bold text-white/70">$</span>
+          <div className="mb-2 inline-flex items-baseline gap-1">
+            <span className="text-3xl font-bold text-white/70">৳ </span>
             <span className="text-4xl font-bold text-white/50">
               {props.yearly ? props.price.yearly : props.price.monthly}
             </span>
-            <span className="font-medium text-white/70">/mo</span>
+            <span className="font-medium text-white/70">
+              /{props.yearly ? "বছর" : "মাস"}
+            </span>
           </div>
           <div className="mb-5 text-sm text-white/70">
             {props.planDescription}
@@ -43,10 +45,10 @@ export function PricingTab(props: PricingTabProps) {
             className="inline-flex w-full justify-center whitespace-nowrap rounded-lg bg-[#5D2CA8] px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 transition-colors duration-150 hover:bg-[#5D2CA2] focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-600"
             href="#0"
           >
-            Purchase Plan
+            কিনুন
           </a>
         </div>
-        <div className="mb-3 font-medium text-slate-200">Includes:</div>
+        <div className="mb-3 font-medium text-slate-200">সাথে থাকছে:</div>
         <ul className="grow space-y-3 text-sm text-slate-400">
           {props.features.map((feature, index) => {
             return (
@@ -89,19 +91,19 @@ export default function PricingTable() {
             onClick={() => setIsAnnual(true)}
             aria-pressed={isAnnual}
           >
-            Yearly{" "}
-            <span
+            বছর{" "}
+            {/* <span
               className={`${isAnnual ? "text-indigo-200" : "text-slate-400 dark:text-slate-500"}`}
             >
               -20%
-            </span>
+            </span> */}
           </button>
           <button
             className={`relative h-8 flex-1 rounded-full text-sm font-medium transition-colors duration-150 ease-in-out focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-600 ${isAnnual ? "text-white/70" : " text-white"}`}
             onClick={() => setIsAnnual(false)}
             aria-pressed={isAnnual}
           >
-            Monthly
+            মাস
           </button>
         </div>
       </div>
@@ -110,14 +112,14 @@ export default function PricingTable() {
         {/* Pricing tab 1 */}
         <PricingTab
           yearly={isAnnual}
-          planName="Essential"
-          price={{ yearly: 29, monthly: 35 }}
-          planDescription="There are many variations available, but the majority have suffered."
+          planName="৫ এমবিপিএস"
+          price={{ yearly: "৬০০০", monthly: "৫০০" }}
+          planDescription="অর্থপ্রদান নগদ, ব্যাঙ্ক ট্রান্সফার বা কোম্পানি দ্বারা সমর্থিত যেকোনো ডিজিটাল পেমেন্ট প্ল্যাটফর্মের মাধ্যমে করা যেতে পারে।"
           features={[
-            "Unlimited placeholder texts",
-            "Consectetur adipiscing elit",
-            "Excepteur sint occaecat cupidatat",
-            "Officia deserunt mollit anim",
+            "ফ্রি কানেকশন",
+            "24/7 কাটমার সাপোর্ট ",
+            "50 mbps ইউটিউব ",
+            "50 mbps ফেসবুক ",
           ]}
         />
 
@@ -125,31 +127,28 @@ export default function PricingTable() {
         <PricingTab
           yearly={isAnnual}
           popular={true}
-          planName="Perform"
-          price={{ yearly: 49, monthly: 55 }}
-          planDescription="There are many variations available, but the majority have suffered."
+          planName="৮ এমবিপিএস"
+          price={{ yearly: "৬৩০০", monthly: "৫২৫" }}
+          planDescription="অর্থপ্রদান নগদ, ব্যাঙ্ক ট্রান্সফার বা কোম্পানি দ্বারা সমর্থিত যেকোনো ডিজিটাল পেমেন্ট প্ল্যাটফর্মের মাধ্যমে করা যেতে পারে।"
           features={[
-            "Unlimited placeholder texts",
-            "Consectetur adipiscing elit",
-            "Excepteur sint occaecat cupidatat",
-            "Officia deserunt mollit anim",
-            "Predefined chunks as necessary",
+            "ফ্রি কানেকশন",
+            "24/7 কাটমার সাপোর্ট ",
+            "100 mbps ইউটিউব ",
+            "100 mbps ফেসবুক ",
           ]}
         />
 
         {/* Pricing tab 3 */}
         <PricingTab
           yearly={isAnnual}
-          planName="Enterprise"
-          price={{ yearly: 79, monthly: 85 }}
-          planDescription="There are many variations available, but the majority have suffered."
+          planName="১০ এমবিপিএস"
+          price={{ yearly: "৭২০০", monthly: "৬০০" }}
+          planDescription="অর্থপ্রদান নগদ, ব্যাঙ্ক ট্রান্সফার বা কোম্পানি দ্বারা সমর্থিত যেকোনো ডিজিটাল পেমেন্ট প্ল্যাটফর্মের মাধ্যমে করা যেতে পারে।"
           features={[
-            "Unlimited placeholder texts",
-            "Consectetur adipiscing elit",
-            "Excepteur sint occaecat cupidatat",
-            "Officia deserunt mollit anim",
-            "Predefined chunks as necessary",
-            "Free from repetition",
+            "ফ্রি কানেকশন",
+            "24/7 কাটমার সাপোর্ট ",
+            "100 mbps ইউটিউব ",
+            "100 mbps ফেসবুক ",
           ]}
         />
       </div>
