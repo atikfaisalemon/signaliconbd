@@ -14,28 +14,31 @@ model User {
   email        String?  @unique
   phone        String   @unique
   name         String?
+  username     String @unique
   fathersName  String?
   password     String?
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
-  addresses    Address[]
-  subscriptions Subscription[]
+  addresses    Address?
+  subscriptions Subscription?
   transactions Transaction[]
 
-  @@index([phone])
+  @@index([phone,username,email])
 }
 
 model Address {
   id        String   @id @default(cuid())
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String @unique
+  user      User     @relation(fields: [userId], references: [id])
   street    String
   city      String
   state     String?
   zip       String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@index([userId])
 }
 
 model InternetPackage {
@@ -51,8 +54,8 @@ model InternetPackage {
 
 model Subscription {
   id           String   @id @default(cuid())
-  userId       String
-  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId       String @unique
+  user         User     @relation(fields: [userId], references: [id])
   packageId    String
   package      InternetPackage @relation(fields: [packageId], references: [id], onDelete: Cascade)
   startDate    DateTime @default(now())
@@ -61,6 +64,9 @@ model Subscription {
   updatedAt    DateTime @updatedAt
 
   transactions Transaction[]
+
+  @@index([userId])
+  @@index([packageId])
 }
 
 model Transaction {
@@ -75,6 +81,9 @@ model Transaction {
   status        TransactionStatus
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
+
+  @@index([userId])
+  @@index([subscriptionId])
 }
 
 enum TransactionStatus {

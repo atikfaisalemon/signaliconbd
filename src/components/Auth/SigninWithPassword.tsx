@@ -5,6 +5,7 @@ import { useFormState, useFormStatus } from "react-dom";
 
 export function SigninWithPassword() {
   const [state, action] = useFormState(signin, undefined);
+  console.log("state", state);
 
   return (
     <form action={action}>
@@ -13,13 +14,13 @@ export function SigninWithPassword() {
           htmlFor="email"
           className="mb-2.5 block font-medium text-dark dark:text-white"
         >
-          মোবাইল নম্বর
+          মোবাইল নম্বর অথবা ইউজারনেম
         </label>
         <div className="relative">
           <input
-            type="number"
-            placeholder="আপনার ফোন নম্বর লিখুন"
-            name="phone"
+            type="text"
+            placeholder="আপনার ফোন নম্বর অথবা ইউজারনেম লিখুন"
+            name="usernameOrPhone"
             className="w-full rounded-lg border border-stroke bg-transparent py-[15px] pl-6 pr-11 font-medium text-dark outline-none [appearance:textfield] focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:focus:border-primary [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
           />
 
@@ -41,8 +42,10 @@ export function SigninWithPassword() {
             </svg>
           </span>
         </div>
-        {state?.errors?.phone && (
-          <p className="mb-2 text-sm text-red-500">{state.errors.phone}</p>
+        {state?.errors?.usernameOrPhone && (
+          <p className="mb-2 text-sm text-red-500">
+            {state.errors.usernameOrPhone}
+          </p>
         )}
       </div>
 

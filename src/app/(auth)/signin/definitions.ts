@@ -18,16 +18,16 @@ export const SignupFormSchema = z.object({
 });
 
 export const LoginFormSchema = z.object({
-  phone: z
+  usernameOrPhone: z
     .string()
-    .min(1, { message: "Phone number field must not be empty." }),
+    .min(1, { message: "Username Or phone number is required." }),
 });
 
 export type FormState =
   | {
       errors?: {
         name?: string[];
-        phone?: string[];
+        usernameOrPhone?: string[];
       };
       message?: string;
     }

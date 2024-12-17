@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
-import { DEFAULT_REDIRECT, PUBLIC_ROUTES, ROOT } from "./lib/routes";
-import { authConfig } from "./auth.config";
-import NextAuth from "next-auth";
+// import { NextRequest, NextResponse } from "next/server";
+// import { DEFAULT_REDIRECT, PUBLIC_ROUTES, ROOT } from "./lib/routes";
+// import { authConfig } from "./auth.config";
+// import NextAuth from "next-auth";
 
 // const { auth } = NextAuth(authConfig);
 
@@ -19,8 +19,9 @@ import NextAuth from "next-auth";
 //     return Response.redirect(new URL(ROOT, nextUrl));
 // });
 
-export default NextAuth(authConfig).auth;
+// export default NextAuth(authConfig).auth;
 
+export { auth as middleware } from "@/auth";
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };

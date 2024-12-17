@@ -10,7 +10,7 @@ export async function signin(
 ): Promise<FormState> {
   // validate the form data
   const validationResult = LoginFormSchema.safeParse({
-    phone: formData.get("phone"),
+    usernameOrPhone: formData.get("usernameOrPhone"),
   });
 
   const errorMessage = { message: "Invalid login credentials" };
@@ -22,7 +22,7 @@ export async function signin(
 
   try {
     await signIn("credentials", {
-      phone: validationResult.data.phone,
+      usernameOrPhone: validationResult.data.usernameOrPhone,
     });
   } catch (error) {
     if (error instanceof AuthError) {
